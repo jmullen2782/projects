@@ -20,29 +20,29 @@ for simulator in range(0, simulator+1):
         if switch=='stay':
             win+=1
     elif car==1 and door==2:
-        if switch=='stay':
+        if switch=='switch':
             win+=1
     elif car==1 and door==3:
-        if switch=='stay':
+        if switch=='switch':
             win+=1
     if car==2 and door==1:
-        if switch=='stay':
+        if switch=='switch':
             win+=1
     elif car==2==door:
         if switch=='stay':
             win+=1
     elif car==2 and door==3:
-        if switch=='stay':
+        if switch=='switch':
             win+=1
     if car==3 and door==1:
         if switch=='stay':
             win+=1
     elif car==3 and door==2:
-        if switch=='stay':
+        if switch=='switch':
             win+=1
     elif car==3==door:
         if switch=='stay':
             win+=1
             
-      
-print('You won', win, '/', simulator)
+percent=(win/simulator)*100
+print('You won', win, '/', simulator, '(', percent, '%)')
