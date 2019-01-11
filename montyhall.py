@@ -1,49 +1,48 @@
 '''
-Created on Nov 16, 2018
-
+Created on Nov 28, 2018
 @author: Jennie Mullen
-Monty Hall problem
+Monty Hall Problem
 '''
+simulator=int(input('How many times would you like to run the simulations?'))
+while simulator<10 or simulator>10000:
+    simulator=int(input('Invalid number, enter number between 10 and 10,000 '))
+switch=input('Should the player switch or stay?')
+while switch!='stay' and switch!='switch':
+    print('Must either enter "switch" or "stay"')
+    switch=input('Please try again')
 
-from random import randint
-car=randint(1,3)
-guess=int(input('Which door would you like to pick:'))
-goat= not car
-if car==1==guess:
-    print('There is a goat behind Door #2')
-    guess2=input('Would you like to change your pick?')
-    if guess2.lower()='yes':
-        print('You won!')
-    else:
-        print('You lost :(')
-elif car==1 and guess==2:
-    print('There is a goat behind Door #3')
-    guess2=input('Would you like to change your pick?')
-    if guess2.lower()='yes':
-        print('You won!')
-    else:
-        print('You lost :(')
-elif car==1 and guess==3:
-    print('There is a goat behind Door #2')
-    guess2=input('Would you like to change your pick?')
-    if guess2.lower()='yes':
-        print('You won!')
-    else:
-        print('You lost :(')
-        
-if car==2 and guess==1:
-    print('There is a goat behind Door #3')
-    guess2=input('Would you like to change your pick?')
-    if guess2.lower()='yes':
-        print('You won!')
-    else:
-        print('You lost :(')
-elif car==2==guess:
-    print('There is a goat behind Door #2')
-    guess2=input('Would you like to change your pick?')
-    if guess2.lower()='yes':
-        print('You won!')
-    else:
-        print('You lost :(')
-elif 
-print('The car was behind Door #', car)
+win=0
+for simulator in range(0, simulator+1): 
+    from random import randint
+    car=randint(1,3)
+    door=randint(1,3)
+    if car==1==door:
+        if switch=='stay':
+            win+=1
+    elif car==1 and door==2:
+        if switch=='stay':
+            win+=1
+    elif car==1 and door==3:
+        if switch=='stay':
+            win+=1
+    if car==2 and door==1:
+        if switch=='stay':
+            win+=1
+    elif car==2==door:
+        if switch=='stay':
+            win+=1
+    elif car==2 and door==3:
+        if switch=='stay':
+            win+=1
+    if car==3 and door==1:
+        if switch=='stay':
+            win+=1
+    elif car==3 and door==2:
+        if switch=='stay':
+            win+=1
+    elif car==3==door:
+        if switch=='stay':
+            win+=1
+            
+      
+print('You won', win, '/', simulator)
