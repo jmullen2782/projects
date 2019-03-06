@@ -5,6 +5,7 @@ Created on Mar 4, 2019
 '''
 answerkey = ["A", "C", "A", "A", "D", "B", "C", "A", "C", "B", "A", "D", "C", "A", "D", "C", "B", "B", "D", "A"]
 response = []
+responseIndex = 0
 correct = 0
 incorrect = 0
 numanswers = 0
@@ -13,8 +14,9 @@ file = open('drivers license student.txt', 'r')
 response = file.readlines()
 file.close()
 
+while responseIndex <= 19:
+    response.append(responseIndex)
 while numanswers != 20:
-    response.append()
     numanswers += 1
 
 while index <=19:
