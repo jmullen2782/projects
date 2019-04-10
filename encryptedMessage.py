@@ -7,10 +7,11 @@ import string
 alpha = []
 for c in string.ascii_lowercase:
     alpha.append(c)
-ralpha = []
-for i in alpha:
-    ralpha.reverse(i)
 shift = 3
+ealpha = []
+for i in alpha:
+    rshift = shift*-1
+    
 def main():
     text = input("Please enter a file name: ")
     text.open()
