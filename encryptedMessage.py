@@ -7,17 +7,18 @@ import string
 alpha = []
 for c in string.ascii_lowercase:
     alpha.append(c)
-shift = 3
-ealpha = []
-for i in alpha:
-    rshift = shift*-1
+code = []
+count = 0
+for i in range(0,26):
+    code.append((count+i)%26)
+    count+=1
+shift = -3
+alpha.insert(0,alpha[shift:])
+del alpha[shift:]
+text = input("Please enter a file name: ")
+encrypt = open(text,"r")
+
     
-def main():
-    text = input("Please enter a file name: ")
-    text.open()
-    text.readline()
-    text.write()
-    for letter in text:
         
         
     
