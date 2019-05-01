@@ -3,7 +3,7 @@ Created on Apr 4, 2019
 
 @author: Jennie Mullen
 '''
-def cipher():
+def main():
     text = input("Please enter a file name: ")
     encrypt = open(text,"r")
     new = encrypt.read()
@@ -19,10 +19,10 @@ def cipher():
     newEncrypt = ''
     x = 0
     a = 0
-    for character in encrypt:
-        if encrypt[x] != alpha[a%26]:
+    for character in encrypt[0:]:
+        if encrypt[character] != alpha[a%26]:
             a += 1
-        elif encrypt[x] = alpha[a]:
+        elif encrypt[character] = alpha[a]:
             newEncrypt.append=code[a], sep = ''
             x += 1
         elif encrypt[x].isupper():
