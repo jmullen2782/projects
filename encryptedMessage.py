@@ -1,10 +1,12 @@
 '''
 Created on Apr 4, 2019
-
+Encrypted Message 1
 @author: Jennie Mullen
 '''
 def main():
-    text = input("Please enter a file name: ")
+    text = input("Enter a file to encrypt: ")
+def cipher():
+    main()
     encrypt = open(text,"r")
     new = encrypt.read()
     new.close()
@@ -12,7 +14,7 @@ def main():
     alpha = []
     for c in string.ascii_lowercase:
         alpha.append(c)
-    shift = int(input("How many places would you like to shift?"))
+    shift = 3
     code = []
     for i in range(0,26):
         code.append((i+shift)%26)
@@ -22,7 +24,7 @@ def main():
     for character in encrypt[0:]:
         if encrypt[character] != alpha[a%26]:
             a += 1
-        elif encrypt[character] = alpha[a]:
+        elif encrypt[character] == alpha[a]:
             newEncrypt.append=code[a], sep = ''
             x += 1
         elif encrypt[x].isupper():
