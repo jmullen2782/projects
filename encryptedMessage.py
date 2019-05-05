@@ -34,3 +34,4 @@ def cipher():
     print(newEncrypt)
     test.ENC = open('new','w')
     print(new)
+cipher() 
